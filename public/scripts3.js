@@ -3,7 +3,7 @@ let filteredData = [];
 
 const showDataDOM = document.getElementById("show-data");
 const loaderDOM = document.getElementById("loader");
-const searchInputDOM = document.getElementById("search-input");
+// const searchInputDOM = document.getElementById("search-input");
 
 const vndFormatterParts = new Intl.NumberFormat("vi-VN", {
   style: "currency",
@@ -190,20 +190,20 @@ const loadData = () => {
       ],
     ];
 
-    if (searchInputDOM.value) {
-      filteredData = data.map((item) => {
-        return item.filter((i) => {
-          if (
-            i.licensePlate.toLowerCase().includes(searchInputDOM.value.toLowerCase()) ||
-            i.number.toString().toLowerCase().includes(searchInputDOM.value.toLowerCase())
-          ) {
-            return true;
-          }
-        });
-      });
-    } else {
+    // if (searchInputDOM.value) {
+    //   filteredData = data.map((item) => {
+    //     return item.filter((i) => {
+    //       if (
+    //         i.licensePlate.toLowerCase().includes(searchInputDOM.value.toLowerCase()) ||
+    //         i.number.toString().toLowerCase().includes(searchInputDOM.value.toLowerCase())
+    //       ) {
+    //         return true;
+    //       }
+    //     });
+    //   });
+    // } else {
       filteredData = data;
-    }
+    // }
 
     render();
 
@@ -226,25 +226,25 @@ const main = () => {
 
 main();
 
-searchInputDOM.addEventListener("input", (e) => {
-  const value = e.target.value;
+// searchInputDOM.addEventListener("input", (e) => {
+//   const value = e.target.value;
 
-  if (value) {
-    filteredData = data.map((item) => {
-      return item.filter((i) => {
-        if (
-          i.licensePlate.toLowerCase().includes(value.toLowerCase()) ||
-          i.number.toString().toLowerCase().includes(value.toLowerCase())
-        ) {
-          return true;
-        }
-      });
-    });
+//   if (value) {
+//     filteredData = data.map((item) => {
+//       return item.filter((i) => {
+//         if (
+//           i.licensePlate.toLowerCase().includes(value.toLowerCase()) ||
+//           i.number.toString().toLowerCase().includes(value.toLowerCase())
+//         ) {
+//           return true;
+//         }
+//       });
+//     });
 
-    console.log(filteredData);
-  } else {
-    filteredData = data;
-  }
+//     console.log(filteredData);
+//   } else {
+//     filteredData = data;
+//   }
 
-  render();
-});
+//   render();
+// });
