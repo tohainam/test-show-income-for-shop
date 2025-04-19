@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bảng doanh thu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+    }
+  </style>
+  </head>
+  <body>
+    <div
+      id="loader"
+      class="justify-content-center align-items-center position-fixed top-0 left-0 h-100 w-100 bg-light opacity-75"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 5rem; height: 5rem"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 0px 100px">
+        <div class="my-3">
+            <input type="text" autofocus class="form-control w-50 mx-auto" id="search-input" placeholder="Nhập từ khóa tìm kiêm">
+        </div>
+      <div class="row" id="show-data"></div>
+    </div>
+
+    <script src="scripts3.js"></script>
+  </body>
+</html>

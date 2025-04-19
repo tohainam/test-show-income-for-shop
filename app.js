@@ -25,21 +25,38 @@ app.get("/demo1", (req, res) => {
 });
 
 app.get("/demo2", (req, res) => {
-    const indexPath = path.join(__dirname, "client", "index2.html");
-  
-    // Gửi tệp index.html về cho trình duyệt client
-    res.sendFile(indexPath, (err) => {
-      if (err) {
-        console.error("Lỗi khi gửi tệp:", err);
-        // Quan trọng: Kiểm tra xem header đã được gửi chưa trước khi gửi response lỗi
-        if (!res.headersSent) {
-          res.status(500).send("Lỗi máy chủ: Không thể gửi tệp.");
-        }
-      } else {
-        console.log("Đã gửi thành công:", "index.html");
+  const indexPath = path.join(__dirname, "client", "index2.html");
+
+  // Gửi tệp index.html về cho trình duyệt client
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      console.error("Lỗi khi gửi tệp:", err);
+      // Quan trọng: Kiểm tra xem header đã được gửi chưa trước khi gửi response lỗi
+      if (!res.headersSent) {
+        res.status(500).send("Lỗi máy chủ: Không thể gửi tệp.");
       }
-    });
+    } else {
+      console.log("Đã gửi thành công:", "index.html");
+    }
   });
+});
+
+app.get("/demo3", (req, res) => {
+  const indexPath = path.join(__dirname, "client", "index3.html");
+
+  // Gửi tệp index.html về cho trình duyệt client
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      console.error("Lỗi khi gửi tệp:", err);
+      // Quan trọng: Kiểm tra xem header đã được gửi chưa trước khi gửi response lỗi
+      if (!res.headersSent) {
+        res.status(500).send("Lỗi máy chủ: Không thể gửi tệp.");
+      }
+    } else {
+      console.log("Đã gửi thành công:", "index.html");
+    }
+  });
+});
 
 // Optional: Xử lý các route không khớp (404 Not Found)
 app.use((req, res) => {
