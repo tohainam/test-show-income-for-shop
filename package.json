@@ -1,0 +1,23 @@
+{
+  "name": "show-income-for-shop",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/tohainam/test-show-income-for-shop#readme",
+  "bugs": {
+    "url": "https://github.com/tohainam/test-show-income-for-shop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tohainam/test-show-income-for-shop.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
